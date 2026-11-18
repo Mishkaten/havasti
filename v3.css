@@ -227,3 +227,5 @@ html{-webkit-text-size-adjust:100%}a,button{-webkit-tap-highlight-color:transpar
 .dt:hover{background:rgba(242,140,40,.1);box-shadow:none}.dt:hover .dtn{color:var(--ink)}
 .dw-f{margin-bottom:16px}
 @media(max-width:600px){.dw-g{display:flex;grid-template-columns:none}.dt{min-height:40px;padding:9px 14px 9px 11px}.dtn{font-size:13.5px}}
+@media(max-width:600px){.uc-tabs{margin:0 -16px;padding:0 16px 6px}}
+html,body{overflow-x:clip}
