@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terms and privacy · Havasti</title>
+<meta name="robots" content="index,follow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Armenian:wght@400;500;600&family=Noto+Serif+Armenian:wght@600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ux.css">
+</head>
+<body>
+<div class="tri"></div>
+<header><div class="wrap nav">
+  <a class="brand" href="index.html"><img src="assets/mark.svg" alt=""><span>Havasti</span></a>
+  <div class="lang" style="margin-left:auto" role="group" aria-label="Language">
+    <button data-lang="hy">Հայ</button><button data-lang="en">EN</button><button data-lang="ru">РУ</button>
+  </div>
+</div></header>
+<main class="doc" id="doc"></main>
+<footer><div class="wrap"><div><strong>Havasti · Հավաստի</strong></div><div><a href="index.html" id="back"></a> · © 2026</div></div></footer>
+<script>
+const P = {company: '[Company name]', tin: '[TIN]', addr: '[Address, Yerevan]', email: '[email]', phone: '[phone]'};
+const D = {
+en: {
+  back: 'Back to site', title: 'Terms and Conditions', upd: 'Last updated: 18 November 2026',
+  note: 'Draft template. It must be reviewed by a qualified lawyer in Armenia and the placeholders in square brackets completed before use.',
+  s: [
+  ['1. Who we are', `These terms govern the translation services of ${P.company} (TIN ${P.tin}, ${P.addr}), operating as Havasti ("we", "us"), and apply to every order placed by you ("the Client"). By sending a document or accepting a quote you accept these terms.`],
+  ['2. Services', 'We arrange translation of documents between Armenian and other languages by a translator, and certification of the translator\'s signature by a notary. On request we arrange an apostille and delivery of the original.'],
+  ['3. Quote and price', 'You send a scan or photo of the document. We reply with a fixed price and delivery date. Prices on the website are indicative ("from"). The quote is valid for 7 days. We start work only after you accept the quote and pay. Prices are in Armenian dram (AMD) and include the notary fee unless the quote says otherwise.'],
+  ['4. Payment', 'Payment is made before work starts, by the methods named in the quote. For large or long orders we may ask for an advance of up to 50% and the rest before delivery of the original.'],
+  ['5. Deadlines', 'Standard delivery of the PDF is 2 to 3 working days from payment. Express delivery is 24 hours from payment, for the surcharge shown in the quote. Deadlines assume clear, complete scans. If the document is unclear or incomplete, the deadline starts from the day we receive a usable copy.'],
+  ['6. Your responsibilities', 'You confirm that the document is genuine, that you have the right to have it translated, and that the scan is complete, legible and shows all stamps, notes and pages, including the reverse side. We translate what we receive and do not check authenticity. We may refuse documents that appear forged or unlawful.'],
+  ['7. Acceptance by authorities', 'We translate and certify according to common requirements in Armenia. Each authority sets its own rules. We cannot guarantee acceptance by a specific body, but we will tell you before payment if we know of a problem. Please tell us which authority or country the document is for.'],
+  ['8. Delivery', 'The PDF is sent to your email or messenger. The original is delivered by courier in Yerevan or collected from us, as chosen in the quote. Delivery outside Yerevan or abroad is priced separately. Risk of loss in transit passes to you on handover to the courier or postal service.'],
+  ['9. Corrections and complaints', 'If we made a mistake (a name, date or number, or a mistranslation), we correct it free of charge within 30 days of delivery. Mistakes copied from an unclear original or from details you gave us are corrected for the cost of the new certification only. Send complaints to the email below. We reply within 5 working days.'],
+  ['10. Cancellation and refunds', 'You may cancel before the translator starts work and get a full refund. Once work has started you pay for the work done. After delivery of the PDF the service is considered provided. If we cannot deliver the service, we refund in full.'],
+  ['11. Confidentiality and personal data', `Documents contain personal data. We use them only to perform your order and share them only with the translator and the notary involved, who are bound by confidentiality. We do not publish documents, sell data or use documents for advertising. We process data under the Law of the Republic of Armenia on the Protection of Personal Data. Messages and scans from inquiries that do not become orders are deleted after 6 months. Files of completed orders are kept for 12 months so we can make corrections, then deleted, except what the law requires us to keep, such as accounting records. You may ask to access, correct or delete your data by writing to ${P.email}. Messengers (such as WhatsApp or Telegram) have their own privacy rules. If you prefer, use email.`],
+  ['12. Website', 'The website uses no advertising or tracking cookies. Fonts and the phone input are loaded from third-party servers (Google Fonts and jsDelivr), which may receive your IP address. Prices and descriptions on the site are informative and may change.'],
+  ['13. Liability', 'Our liability is limited to the price paid for the order, except where the law does not allow a limit. We are not liable for refusal by an authority that applies requirements not known to us, or for delays caused by couriers, notaries\' offices, public bodies or circumstances beyond our control.'],
+  ['14. Governing law and disputes', 'These terms are governed by the law of the Republic of Armenia. We try to settle disputes by talking first. If that fails, the competent courts of the Republic of Armenia decide. Consumers keep any rights the law gives them that cannot be waived.'],
+  ['15. Changes and contact', `We may update these terms. The version in force on the day of your order applies to it. Contact: ${P.email}, ${P.phone}.`]
+  ]},
+hy: {
+  back: 'Վերադառնալ կայք', title: 'Օգտագործման պայմաններ', upd: 'Վերջին թարմացում՝ 2026 թ. նոյեմբերի 18',
+  note: 'Սա նախագիծ-կաղապար է։ Օգտագործելուց առաջ այն պետք է ստուգի Հայաստանի իրավաբանը, իսկ քառակուսի փակագծերով դաշտերը լրացվեն։',
+  s: [
+  ['1. Ով ենք մենք', `Սույն պայմանները կարգավորում են ${P.company}-ի (ՀՎՀՀ ${P.tin}, ${P.addr}) թարգմանչական ծառայությունները, որոնք մատուցվում են «Հավաստի» անվամբ («մենք»), և տարածվում են ձեր («Հաճախորդ») յուրաքանչյուր պատվերի վրա։ Փաստաթուղթ ուղարկելով կամ գնային առաջարկը ընդունելով՝ դուք համաձայնում եք այս պայմաններին։`],
+  ['2. Ծառայություններ', 'Մենք կազմակերպում ենք փաստաթղթերի թարգմանությունը հայերենից և հայերեն այլ լեզուներով թարգմանչի կողմից, և թարգմանչի ստորագրության նոտարական վավերացումը։ Խնդրանքով կազմակերպում ենք ապոստիլ և բնօրինակի առաքում։'],
+  ['3. Առաջարկ և գին', 'Դուք ուղարկում եք փաստաթղթի սկանը կամ լուսանկարը։ Մենք պատասխանում ենք ֆիքսված գնով և ժամկետով։ Կայքի գները ուղենշային են («սկսած»)։ Առաջարկը գործում է 7 օր։ Աշխատանքը սկսում ենք միայն առաջարկն ընդունելուց և վճարելուց հետո։ Գները նշված են հայկական դրամով (AMD) և ներառում են նոտարի վճարը, եթե առաջարկում այլ բան նշված չէ։'],
+  ['4. Վճարում', 'Վճարումը կատարվում է աշխատանքը սկսելուց առաջ, առաջարկում նշված եղանակներով։ Մեծ կամ երկար պատվերների դեպքում կարող ենք պահանջել մինչև 50% կանխավճար, մնացածը՝ բնօրինակը հանձնելուց առաջ։'],
+  ['5. Ժամկետներ', 'PDF-ի ստանդարտ առաքումը վճարումից հետո 2–3 աշխատանքային օր է։ Շտապ առաքումը՝ 24 ժամ վճարումից, առաջարկում նշված հավելավճարով։ Ժամկետները ենթադրում են հստակ և ամբողջական սկաններ։ Անհստակ կամ թերի փաստաթղթի դեպքում ժամկետը հաշվվում է օգտագործելի պատճենը ստանալու օրվանից։'],
+  ['6. Ձեր պարտականությունները', 'Դուք հաստատում եք, որ փաստաթուղթը իսկական է, դուք իրավունք ունեք այն թարգմանել տալու, իսկ սկանն ամբողջական է, ընթեռնելի և ցույց է տալիս բոլոր կնիքները, նշումներն ու էջերը, ներառյալ հետևի երեսը։ Մենք թարգմանում ենք ստացածը և իսկությունը չենք ստուգում։ Կարող ենք հրաժարվել կեղծված կամ անօրինական թվացող փաստաթղթերից։'],
+  ['7. Մարմինների կողմից ընդունում', 'Թարգմանում և վավերացնում ենք Հայաստանում ընդունված ընդհանուր պահանջներով։ Յուրաքանչյուր մարմին սահմանում է իր կանոնները։ Չենք կարող երաշխավորել կոնկրետ մարմնի կողմից ընդունումը, բայց եթե խնդիր գիտենանք, կասենք մինչև վճարումը։ Խնդրում ենք նշել, թե որ մարմնի կամ երկրի համար է փաստաթուղթը։'],
+  ['8. Առաքում', 'PDF-ը ուղարկվում է ձեր էլ. փոստին կամ մեսենջերին։ Բնօրինակն առաքվում է Երևանում առաքիչով կամ վերցվում է մեզ մոտից, ըստ առաջարկի։ Երևանից դուրս կամ արտերկիր առաքումը գնահատվում է առանձին։ Տրանսպորտի ընթացքում կորստի ռիսկն անցնում է ձեզ՝ առաքիչին կամ փոստին հանձնելու պահից։'],
+  ['9. Ուղղումներ և բողոքներ', 'Եթե մենք սխալվել ենք (անուն, ամսաթիվ, համար կամ սխալ թարգմանություն), ուղղում ենք անվճար՝ առաքումից հետո 30 օրվա ընթացքում։ Անհստակ բնօրինակից կամ ձեր տրամադրած տվյալներից առաջացած սխալները ուղղվում են միայն նոր վավերացման արժեքով։ Բողոքներն ուղարկեք ստորև նշված էլ. փոստին։ Պատասխանում ենք 5 աշխատանքային օրում։'],
+  ['10. Չեղարկում և վերադարձ', 'Կարող եք չեղարկել մինչև թարգմանչի աշխատանքը սկսելը և ստանալ ամբողջ գումարը։ Աշխատանքը սկսվելուց հետո վճարում եք կատարված աշխատանքի համար։ PDF-ի առաքումից հետո ծառայությունը համարվում է մատուցված։ Եթե մենք չենք կարող մատուցել ծառայությունը, վերադարձնում ենք ամբողջ գումարը։'],
+  ['11. Գաղտնիություն և անձնական տվյալներ', `Փաստաթղթերը պարունակում են անձնական տվյալներ։ Մենք դրանք օգտագործում ենք միայն ձեր պատվերը կատարելու համար և փոխանցում ենք միայն ներգրավված թարգմանչին և նոտարին, որոնք պարտավոր են գաղտնիություն պահպանել։ Մենք չենք հրապարակում փաստաթղթերը, չենք վաճառում տվյալները և չենք օգտագործում փաստաթղթերը գովազդի համար։ Տվյալները մշակում ենք «Անձնական տվյալների պաշտպանության մասին» ՀՀ օրենքի համաձայն։ Պատվերի չվերածված հարցումների հաղորդագրություններն ու սկաններն ջնջվում են 6 ամսից։ Կատարված պատվերների ֆայլերը պահվում են 12 ամիս՝ ուղղումների համար, ապա ջնջվում են, բացառությամբ այն, ինչ օրենքը պահանջում է պահել, օրինակ՝ հաշվապահական փաստաթղթեր։ Կարող եք պահանջել մուտք, ուղղում կամ ջնջում՝ գրելով ${P.email}։ Մեսենջերները (WhatsApp, Telegram) ունեն իրենց գաղտնիության կանոնները։ Ցանկության դեպքում օգտագործեք էլ. փոստ։`],
+  ['12. Կայք', 'Կայքը չի օգտագործում գովազդային կամ հետևող cookie-ներ։ Տառատեսակները և հեռախոսի դաշտը բեռնվում են երրորդ կողմի սերվերներից (Google Fonts, jsDelivr), որոնք կարող են ստանալ ձեր IP հասցեն։ Կայքի գները և նկարագրությունները տեղեկատվական են և կարող են փոխվել։'],
+  ['13. Պատասխանատվություն', 'Մեր պատասխանատվությունը սահմանափակվում է պատվերի համար վճարված գնով, բացառությամբ այն դեպքերի, երբ օրենքը սահմանափակում չի թույլատրում։ Մենք պատասխանատվություն չենք կրում այն մարմնի մերժման համար, որը կիրառում է մեզ անհայտ պահանջներ, ինչպես նաև առաքիչների, նոտարական գրասենյակների, պետական մարմինների կամ մեզնից անկախ հանգամանքների պատճառով ուշացումների համար։'],
+  ['14. Կիրառելի իրավունք և վեճեր', 'Այս պայմանները կարգավորվում են Հայաստանի Հանրապետության օրենսդրությամբ։ Վեճերը նախ փորձում ենք լուծել բանակցությամբ։ Եթե չստացվի, լուծում են ՀՀ իրավասու դատարանները։ Սպառողները պահպանում են օրենքով տրված այն իրավունքները, որոնցից հնարավոր չէ հրաժարվել։'],
+  ['15. Փոփոխություններ և կոնտակտ', `Մենք կարող ենք թարմացնել այս պայմանները։ Ձեր պատվերի նկատմամբ կիրառվում է պատվերի օրը գործող տարբերակը։ Կոնտակտ՝ ${P.email}, ${P.phone}։`]
+  ]},
+ru: {
+  back: 'Назад на сайт', title: 'Условия оказания услуг', upd: 'Обновлено: 18 ноября 2026',
+  note: 'Это черновик-шаблон. Перед использованием его должен проверить квалифицированный юрист в Армении, а поля в квадратных скобках нужно заполнить.',
+  s: [
+  ['1. Кто мы', `Эти условия регулируют услуги перевода ${P.company} (ИНН ${P.tin}, ${P.addr}), работающей под названием Havasti («мы»), и действуют для каждого заказа, который вы («Клиент») оформляете. Отправляя документ или принимая предложение, вы принимаете эти условия.`],
+  ['2. Услуги', 'Мы организуем перевод документов с армянского и на армянский с другими языками переводчиком и нотариальное заверение подписи переводчика. По запросу организуем апостиль и доставку оригинала.'],
+  ['3. Предложение и цена', 'Вы отправляете скан или фото документа. Мы отвечаем фиксированной ценой и сроком. Цены на сайте ориентировочные («от»). Предложение действует 7 дней. Работу начинаем только после того, как вы приняли предложение и оплатили. Цены указаны в армянских драмах (AMD) и включают сбор нотариуса, если в предложении не указано иное.'],
+  ['4. Оплата', 'Оплата вносится до начала работы способами, указанными в предложении. По крупным или длительным заказам мы можем запросить аванс до 50%, остальное перед выдачей оригинала.'],
+  ['5. Сроки', 'Стандартная выдача PDF: 2–3 рабочих дня с момента оплаты. Срочная: 24 часа с момента оплаты, с доплатой, указанной в предложении. Сроки рассчитаны на чёткие и полные сканы. Если документ нечёткий или неполный, срок отсчитывается со дня получения пригодной копии.'],
+  ['6. Ваши обязанности', 'Вы подтверждаете, что документ подлинный, что вы вправе заказывать его перевод, а скан полный, читаемый и показывает все печати, отметки и страницы, включая оборотную сторону. Мы переводим то, что получили, и подлинность не проверяем. Мы можем отказаться от документов, которые выглядят поддельными или незаконными.'],
+  ['7. Принятие органами', 'Мы переводим и заверяем по общим требованиям, принятым в Армении. Каждый орган устанавливает свои правила. Мы не можем гарантировать принятие конкретным органом, но если знаем о проблеме, скажем до оплаты. Укажите, для какого органа или страны нужен документ.'],
+  ['8. Доставка', 'PDF отправляется на вашу почту или в мессенджер. Оригинал доставляется курьером по Еревану или забирается у нас, как выбрано в предложении. Доставка за пределы Еревана или за границу оценивается отдельно. Риск утраты при перевозке переходит к вам с момента передачи курьеру или почте.'],
+  ['9. Исправления и жалобы', 'Если мы допустили ошибку (имя, дата, номер или неверный перевод), исправим бесплатно в течение 30 дней после выдачи. Ошибки, возникшие из нечёткого оригинала или данных, которые вы сообщили, исправляются только за стоимость нового заверения. Жалобы отправляйте на почту ниже. Отвечаем в течение 5 рабочих дней.'],
+  ['10. Отмена и возврат', 'Вы можете отменить заказ до начала работы переводчика и получить полный возврат. После начала работы вы оплачиваете выполненную работу. После выдачи PDF услуга считается оказанной. Если мы не можем оказать услугу, возвращаем деньги полностью.'],
+  ['11. Конфиденциальность и персональные данные', `Документы содержат персональные данные. Мы используем их только для выполнения вашего заказа и передаём только задействованным переводчику и нотариусу, которые обязаны хранить тайну. Мы не публикуем документы, не продаём данные и не используем документы в рекламе. Данные обрабатываются в соответствии с Законом Республики Армения о защите персональных данных. Сообщения и сканы по запросам, не ставшим заказами, удаляются через 6 месяцев. Файлы выполненных заказов хранятся 12 месяцев для исправлений, затем удаляются, кроме того, что закон требует хранить, например бухгалтерских записей. Вы можете запросить доступ, исправление или удаление данных, написав на ${P.email}. У мессенджеров (WhatsApp, Telegram) свои правила конфиденциальности. При желании используйте почту.`],
+  ['12. Сайт', 'Сайт не использует рекламные или отслеживающие cookie. Шрифты и поле телефона загружаются со сторонних серверов (Google Fonts, jsDelivr), которые могут получать ваш IP-адрес. Цены и описания на сайте носят информационный характер и могут меняться.'],
+  ['13. Ответственность', 'Наша ответственность ограничена стоимостью оплаченного заказа, кроме случаев, когда закон не допускает ограничения. Мы не отвечаем за отказ органа, применяющего неизвестные нам требования, а также за задержки по вине курьеров, нотариальных контор, государственных органов или обстоятельств вне нашего контроля.'],
+  ['14. Применимое право и споры', 'Эти условия регулируются законодательством Республики Армения. Споры мы сначала стараемся решить переговорами. Если не получится, их разрешают компетентные суды Республики Армения. Потребители сохраняют права, которые закон даёт и от которых нельзя отказаться.'],
+  ['15. Изменения и контакты', `Мы можем обновлять эти условия. К вашему заказу применяется версия, действовавшая в день заказа. Контакты: ${P.email}, ${P.phone}.`]
+  ]}
+};
+let lang = 'hy';
+try { lang = localStorage.getItem('lang') || (navigator.language || '').slice(0, 2); } catch (e) {}
+if (!D[lang]) lang = 'hy';
+function draw() {
+  const d = D[lang], el = document.getElementById('doc');
+  document.documentElement.lang = lang;
+  el.innerHTML = '';
+  const add = (tag, text, cls) => { const n = document.createElement(tag); n.textContent = text; if (cls) n.className = cls; el.appendChild(n); return n; };
+  add('h1', d.title);
+  add('p', d.upd);
+  add('p', d.note, 'note');
+  d.s.forEach(([h, p]) => { const n = add('h2', h); if (h.startsWith('11.')) n.id = 'privacy'; add('p', p); });
+  document.getElementById('back').textContent = d.back;
+  document.title = d.title + ' · Havasti';
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+}
+document.querySelectorAll('.lang button').forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem('lang', lang); } catch (e) {} draw(); });
+draw();
+</script>
+</body>
+</html>

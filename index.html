@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Havasti · Հավաստի | Certified translation Armenia</title>
+<meta name="description" content="Certified document translation in Armenia: fixed price, notary certification, apostille, PDF in 24 hours. Hy / En / Ru / De and more.">
+<meta name="theme-color" content="#1B2340">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Armenian:wght@400;500;600&family=Noto+Serif+Armenian:wght@600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ux.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+<link rel="stylesheet" href="v3.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<div class="tri"></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#top"><img src="assets/mark.svg" alt=""><span>Havasti</span></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="links" id="nav">
+    <a href="#prices" data-i18n="nav_prices"></a><a href="#process" data-i18n="nav_process"></a>
+    <a href="#proof" data-i18n="nav_proof"></a><a href="#faq" data-i18n="nav_faq"></a><a href="#contact" data-i18n="nav_contact"></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button data-lang="hy">Հայ</button><button data-lang="en">EN</button><button data-lang="ru">РУ</button>
+  </div>
+  <a class="btn btn-p" href="#calc" data-i18n="nav_calc"></a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap grid">
+  <div>
+    <div class="badge"><i></i><span data-i18n="hero_eyebrow"></span></div>
+    <h1 data-i18n="hero_h1"></h1>
+    <p class="lead" data-i18n="hero_lead"></p>
+    <ul class="ticks"><li data-i18n="hero_t1"></li><li data-i18n="hero_t2"></li><li data-i18n="hero_t3"></li></ul>
+    <div class="cta"><a class="btn btn-p" href="#contact" data-i18n="cta_send"></a><a class="btn btn-s" href="#calc" data-i18n="cta_calc"></a></div>
+  </div>
+  <div class="mock" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <div class="file"><div class="ic">PDF</div><div><div class="fn">birth-certificate.pdf</div><div class="fs">1.2 MB</div></div></div>
+    <ol id="mock-steps">
+      <li data-i18n="m1"></li><li data-i18n="m2"></li><li data-i18n="m3"></li><li data-i18n="m4"></li>
+    </ol>
+    <div class="tot"><span data-i18n="hero_price"></span><b>6 000 ֏</b></div>
+  </div>
+</div>
+<canvas id="fx"></canvas></section>
+
+<div class="wrap"><div class="trust rv">
+  <div><b data-i18n="tr1h"></b><span data-i18n="tr1p"></span></div>
+  <div><b data-i18n="tr2h"></b><span data-i18n="tr2p"></span></div>
+  <div><b data-i18n="tr3h"></b><span data-i18n="tr3p"></span></div>
+  <div><b data-i18n="tr4h"></b><span data-i18n="tr4p"></span></div>
+</div></div>
+
+<div class="mq" aria-hidden="true"><div class="mq-track" id="mq"></div></div>
+
+<section id="partners" hidden><div class="wrap">
+  <div class="eyebrow" id="pt-eye"></div><h2 id="pt-h" style="font-size:clamp(20px,2.4vw,28px)"></h2>
+  <div class="lgwrap"><div class="lg-track" id="pt-track"></div></div>
+</div></section>
+
+<section id="story"><div class="wrap story">
+  <div>
+    <div class="eyebrow" id="st-eye"></div>
+    <h2 class="ed" id="st-h"></h2>
+    <p id="st-p"></p>
+  </div>
+  <div class="frame rv">
+    <div class="swiper" id="photos">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="parallax"><img src="assets/photos/ararat.jpg" alt="Mount Ararat above Yerevan" width="1920" height="1280"></div><div class="ph-cap"></div></div>
+        <div class="swiper-slide"><div class="parallax"><img src="assets/photos/manuscripts.jpg" alt="Armenian manuscripts in a display case" width="1600" height="1200" loading="lazy"></div><div class="ph-cap"></div></div>
+        <div class="swiper-slide"><div class="parallax"><img src="assets/photos/cascade.jpg" alt="The Cascade in Yerevan" width="1920" height="883" loading="lazy"></div><div class="ph-cap"></div></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="prices"><div class="wrap">
+  <div class="eyebrow" data-i18n="pr_eyebrow"></div><h2 data-i18n="pr_h"></h2>
+  <div class="cards rv" id="cards"></div>
+  <p style="color:var(--ink2);font-size:14px;margin-top:16px" data-i18n="pr_note"></p>
+</div></section>
+
+<section id="calc" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow" data-i18n="calc_eyebrow"></div><h2 data-i18n="calc_h"></h2>
+  <div class="calc rv">
+    <div>
+      <div class="f"><label for="doc" data-i18n="calc_doc"></label><select id="doc"></select></div>
+      <div class="f"><label for="lp" data-i18n="calc_lp"></label><select id="lp"></select></div>
+      <div class="f"><label data-i18n="calc_speed"></label><div class="opts">
+        <label class="opt"><input type="radio" name="speed" value="0" checked> <span data-i18n="calc_std"></span></label>
+        <label class="opt"><input type="radio" name="speed" value="1"> <span data-i18n="calc_exp"></span></label></div></div>
+      <div class="f"><label data-i18n="calc_deliv"></label><div class="opts">
+        <label class="opt"><input type="radio" name="deliv" value="0" checked> <span data-i18n="calc_pdf"></span></label>
+        <label class="opt"><input type="radio" name="deliv" value="1"> <span data-i18n="calc_courier"></span></label></div></div>
+      <label class="opt" style="max-width:340px"><input type="checkbox" id="apo"> <span data-i18n="calc_apo"></span></label>
+    </div>
+    <div class="sum" aria-live="polite">
+      <ul id="lines"></ul>
+      <div class="tot" id="total">0 ֏</div>
+      <small data-i18n="calc_note"></small>
+      <a class="btn btn-p" href="#contact" data-i18n="cta_send"></a>
+    </div>
+  </div>
+</div></section>
+
+<section id="process" class="band"><div class="wrap">
+  <div class="eyebrow" data-i18n="pc_eyebrow"></div><h2 data-i18n="pc_h"></h2>
+  <div class="steps rv">
+    <div class="step"><h3 data-i18n="s1h"></h3><p data-i18n="s1p"></p></div>
+    <div class="step"><h3 data-i18n="s2h"></h3><p data-i18n="s2p"></p></div>
+    <div class="step"><h3 data-i18n="s3h"></h3><p data-i18n="s3p"></p></div>
+    <div class="step"><h3 data-i18n="s4h"></h3><p data-i18n="s4p"></p></div>
+  </div>
+</div></section>
+
+<section id="demo"><div class="wrap">
+  <div class="eyebrow" id="dm-eye"></div><h2 id="dm-h"></h2>
+  <div class="demo">
+    <div class="tool">
+      <div class="th"><span id="stamp-t"></span><span class="sample"></span></div>
+      <div class="paperwrap">
+        <div class="paper" id="paper" tabindex="0" role="button" aria-label="Stamp">
+          <div id="paper-doc"></div>
+          <svg id="stamp" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+            <circle cx="60" cy="60" r="57" fill="none" stroke="#b3202d" stroke-width="3"/>
+            <circle cx="60" cy="60" r="31" fill="none" stroke="#b3202d" stroke-width="1.5"/>
+            <text font-family="ui-monospace,Consolas,monospace" font-size="11.5" font-weight="700" letter-spacing="2.2" fill="#b3202d"><textPath href="#ring">HAVASTI ✦ NOTARY CERTIFIED ✦ HAVASTI ✦</textPath></text>
+            <path d="M44 61l11 11 21-23" fill="none" stroke="#b3202d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div id="ripple"></div>
+        </div>
+      </div>
+      <div class="row"><button class="btn btn-p" id="stamp-btn" type="button"></button><span id="stamp-lab"></span><span class="hint" id="stamp-hint"></span></div>
+    </div>
+    <div class="tool">
+      <div class="th"><span id="cmp-t"></span><span class="sample"></span></div>
+      <div class="cmp" id="cmp">
+        <div class="sheet" id="cmp-a"></div>
+        <div class="sheet cmp-b" id="cmp-b"></div>
+        <span class="lab l">HY</span><span class="lab r">EN / RU</span>
+        <div class="cmp-h" id="cmp-h" role="slider" tabindex="0" aria-label="Compare" aria-valuemin="4" aria-valuemax="96" aria-valuenow="50"></div>
+      </div>
+      <div class="row"><span class="hint" id="cmp-hint"></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="proof"><div class="wrap">
+  <div class="eyebrow" id="cr-eyebrow"></div><h2 id="cr-h"></h2>
+  <div class="stats rv" id="cr-stats"></div>
+  <div class="swiper aud" id="aud"><div class="swiper-wrapper" id="cr-aud"></div><div class="swiper-pagination"></div></div>
+  <h2 class="sub" id="cr-docs-h"></h2>
+  <div class="dwall rv"><div class="dw-f" id="dw-f" role="tablist"></div><div class="dw-g" id="cr-docs"></div></div>
+  <h2 class="sub" id="cr-net-h"></h2>
+  <div class="vet rv" id="cr-net"></div>
+  <h2 class="sub" id="cr-acc-h"></h2>
+  <div class="accm" id="cr-acc"></div>
+  <div id="cr-rev-wrap" hidden><h2 class="sub" id="cr-rev-h"></h2><div class="cards" id="cr-rev"></div></div>
+  <div id="cr-part-wrap" hidden><h2 class="sub" id="cr-part-h"></h2><div class="logos" id="cr-part"></div></div>
+</div></section>
+
+<section id="uses-s" style="padding-bottom:40px"><div class="wrap">
+  <div class="eyebrow" data-i18n="uc_eyebrow"></div><h2 data-i18n="uc_h"></h2>
+  <div class="chips" id="uses" hidden></div>
+  <div class="uc rv" id="uc"></div>
+</div></section>
+
+<section id="langs-s"><div class="wrap two lang-s">
+  <div><div class="eyebrow" data-i18n="lg_eyebrow"></div><h2 data-i18n="lg_h"></h2>
+    <p data-i18n="lg_note"></p></div>
+  <div id="langs"></div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap" style="max-width:760px">
+  <div class="eyebrow" data-i18n="faq_eyebrow"></div><h2 data-i18n="faq_h"></h2><div id="faqs"></div>
+</div></section>
+
+<section id="contact" class="band"><div class="wrap contact">
+  <div class="cl">
+    <div class="eyebrow" data-i18n="ct_eyebrow"></div><h2 data-i18n="ct_h"></h2>
+    <p data-i18n="ct_p" style="opacity:.85"></p>
+    <a id="lnk-wa" href="#" rel="noopener">WhatsApp</a><a id="lnk-tg" href="#" rel="noopener">Telegram</a>
+    <a id="lnk-ph" href="#"></a><a id="lnk-em" href="#"></a>
+    <p style="opacity:.7;font-size:14px;margin-top:16px" data-i18n="ct_priv"></p>
+  </div>
+  <form id="form" style="background:var(--paper);color:var(--ink);border-radius:22px;padding:26px">
+    <div class="f"><label for="n" data-i18n="f_name"></label><input id="n" type="text" autocomplete="name"><div class="err" id="e-n" role="alert"></div></div>
+    <div class="f"><label for="p" data-i18n="f_phone"></label><input id="p" type="tel" autocomplete="tel"><div class="err" id="e-p" role="alert"></div></div>
+    <div class="f"><label for="m" data-i18n="f_msg"></label><textarea id="m" rows="4"></textarea></div>
+    <label class="dz" id="dz"><input id="files" type="file" multiple accept="image/*,.pdf,application/pdf">
+      <strong data-i18n="dz_title"></strong><span data-i18n="dz_sub"></span></label>
+    <ul class="flist" id="flist"></ul>
+    <p class="tip" data-i18n="dz_tip"></p>
+    <button class="btn btn-p" type="submit" data-i18n="f_send"></button>
+    <p style="font-size:13px;color:var(--ink2);margin:12px 0 0"><span data-i18n="agree"></span> <a href="terms.html" data-i18n="agree_l"></a></p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><strong>Havasti · Հավաստի</strong><br><span data-i18n="ft_tag"></span></div>
+  <div><a href="terms.html" data-i18n="terms_l"></a> · © 2026</div>
+  <p class="credits" style="flex-basis:100%;margin:0"><span id="cr-credits-l"></span>
+    <a href="https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline_in_spring.jpg" rel="noopener">Serouj Ourishian, CC BY 4.0</a> ·
+    <a href="https://commons.wikimedia.org/wiki/File:Manuscripts_at_the_Matenadaran_Yerevan_2026.jpg" rel="noopener">Furkan Akkurt, CC BY-SA 4.0</a> ·
+    <a href="https://commons.wikimedia.org/wiki/File:Cascada,_Ereván,_Armenia,_2016-10-03,_DD_20.jpg" rel="noopener">Diego Delso, CC BY-SA 4.0</a>, Wikimedia Commons</p>
+</div></footer>
+<div id="glow" aria-hidden="true"></div>
+<a class="sticky" id="sticky" href="#contact" data-i18n="sticky"></a>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intlTelInput.min.js"></script>
+<script src="i18n-extra.js"></script>
+<script src="app.js"></script>
+<script src="cred.js"></script>
+<script src="ux.js"></script>
+<script src="fx.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="v3.js"></script>
+<script src="orbit.js"></script>
+<script src="uc.js"></script>
+</body>
+</html>
