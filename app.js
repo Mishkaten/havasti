@@ -12,7 +12,9 @@ const CONFIG = {
   reviews: [],
   express: 5000,                   // AMD surcharge, PDF in 24 h
   courier: 1500,                    // AMD, original delivered in Yerevan
-  apostille: 8000,                  // AMD per document
+  apostille: 13000,                 // AMD per document, state duty (about 7 000) + service fee
+  // price multiplier per language (same order as LANGS, without Armenian): en ru de fr ka fa ar tr uk es it
+  langMult: [1.15, 1, 1.3, 1.3, 1.2, 1.3, 1.3, 1.2, 1, 1.3, 1.3],
   docs: [                           // base prices in AMD, notary fee included
     { id: 'birth',   price: 6000, hy: 'Ծննդյան վկայական', en: 'Birth certificate', ru: 'Свидетельство о рождении' },
     { id: 'marr',    price: 6000, hy: 'Ամուսնության վկայական', en: 'Marriage certificate', ru: 'Свидетельство о браке' },
@@ -41,7 +43,7 @@ const T = {
     pr_eyebrow: 'Գներ', pr_h: 'Ինչ ենք թարգմանում', pr_note: 'Գները նշված են սկսած և ներառում են նոտարական վավերացումը։ Վերջնական գինը հաստատվում է սկանը տեսնելուց հետո, մինչև վճարումը։',
     calc_eyebrow: 'Հաշվիչ', calc_h: 'Մոտավոր գինը՝ 20 վայրկյանում', calc_doc: 'Փաստաթուղթ', calc_lp: 'Լեզվական զույգ', calc_speed: 'Արագություն',
     calc_std: 'Ստանդարտ, 2–3 աշխ. օր', calc_exp: 'Շտապ, PDF 24 ժամում', calc_deliv: 'Բնօրինակի առաքում', calc_pdf: 'Միայն PDF', calc_courier: 'Առաքիչ Երևանում',
-    calc_apo: 'Ավելացնել ապոստիլ', calc_note: 'Մոտավոր գին, ներառյալ նոտարը։ Վերջնականը՝ սկանը տեսնելուց հետո։', total: 'Ընդամենը',
+    calc_apo: 'Ավելացնել ապոստիլ (պետ. տուրքը ներառված է)', calc_note: 'Մոտավոր գին, ներառյալ նոտարը։ Վերջնականը՝ սկանը տեսնելուց հետո։', total: 'Ընդամենը',
     l_base: 'Թարգմանություն և նոտար', l_exp: 'Շտապ', l_courier: 'Առաքիչ', l_apo: 'Ապոստիլ',
     pc_eyebrow: 'Ընթացք', pc_h: 'Չորս քայլ՝ պատրաստ փաստաթղթին',
     s1h: 'Ուղարկեք սկանը', s1p: 'Լուսանկարը կամ սկանը՝ WhatsApp-ով, Telegram-ով կամ էլ. փոստով։',
@@ -75,7 +77,7 @@ const T = {
     pr_eyebrow: 'Prices', pr_h: 'What we translate', pr_note: 'Prices are "from" and include notary certification. The final price is fixed after we see the scan, before you pay.',
     calc_eyebrow: 'Calculator', calc_h: 'A price estimate in 20 seconds', calc_doc: 'Document', calc_lp: 'Language pair', calc_speed: 'Speed',
     calc_std: 'Standard, 2–3 working days', calc_exp: 'Express, PDF in 24 h', calc_deliv: 'Original delivery', calc_pdf: 'PDF only', calc_courier: 'Courier in Yerevan',
-    calc_apo: 'Add apostille', calc_note: 'Estimate, notary included. Final price after we see the scan.', total: 'Total',
+    calc_apo: 'Add apostille (state duty included)', calc_note: 'Estimate, notary included. Final price after we see the scan.', total: 'Total',
     l_base: 'Translation and notary', l_exp: 'Express', l_courier: 'Courier', l_apo: 'Apostille',
     pc_eyebrow: 'Process', pc_h: 'Four steps to a ready document',
     s1h: 'Send the scan', s1p: 'A photo or scan via WhatsApp, Telegram or email.',
@@ -109,7 +111,7 @@ const T = {
     pr_eyebrow: 'Цены', pr_h: 'Что мы переводим', pr_note: 'Цены указаны «от» и включают нотариальное заверение. Окончательная цена фиксируется после просмотра скана, до оплаты.',
     calc_eyebrow: 'Калькулятор', calc_h: 'Примерная цена за 20 секунд', calc_doc: 'Документ', calc_lp: 'Языковая пара', calc_speed: 'Срочность',
     calc_std: 'Стандарт, 2–3 раб. дня', calc_exp: 'Срочно, PDF за 24 часа', calc_deliv: 'Доставка оригинала', calc_pdf: 'Только PDF', calc_courier: 'Курьер по Еревану',
-    calc_apo: 'Добавить апостиль', calc_note: 'Ориентировочная цена, нотариус включён. Окончательная после просмотра скана.', total: 'Итого',
+    calc_apo: 'Добавить апостиль (госпошлина включена)', calc_note: 'Ориентировочная цена, нотариус включён. Окончательная после просмотра скана.', total: 'Итого',
     l_base: 'Перевод и нотариус', l_exp: 'Срочно', l_courier: 'Курьер', l_apo: 'Апостиль',
     pc_eyebrow: 'Процесс', pc_h: 'Четыре шага до готового документа',
     s1h: 'Отправьте скан', s1p: 'Фото или скан через WhatsApp, Telegram или почту.',
@@ -165,7 +167,9 @@ function calc() {
   const exp = document.querySelector('[name=speed]:checked').value === '1';
   const cou = document.querySelector('[name=deliv]:checked').value === '1';
   const apo = $('#apo').checked;
-  const rows = [[t.l_base, d.price]];
+  const mult = CONFIG.langMult[Math.floor(+$('#lp').value / 2)] || 1;
+  const base = Math.round(d.price * mult / 500) * 500;
+  const rows = [[t.l_base, base]];
   if (exp) rows.push([t.l_exp, CONFIG.express]);
   if (cou) rows.push([t.l_courier, CONFIG.courier]);
   if (apo) rows.push([t.l_apo, CONFIG.apostille]);
