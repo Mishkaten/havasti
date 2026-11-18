@@ -2,7 +2,8 @@
 .ed{font-family:'Noto Serif Armenian','Source Serif 4',Georgia,serif;font-weight:600;letter-spacing:-.015em}
 #glow{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:0;opacity:0;background:radial-gradient(circle,rgba(242,140,40,.10),transparent 62%)}
 main,footer{position:relative;z-index:1}
-body>header{position:sticky;top:12px;z-index:40}@media(max-width:600px){body>header{top:8px}}
+body>header{position:relative;top:auto;z-index:40;margin:12px 0 24px}@media(max-width:600px){body>header{margin:8px 0 16px}}
+.hero{padding-top:48px}@media(max-width:600px){.hero{padding-top:32px}}
 
 /* big outlined marquee of document names */
 .mq{overflow:hidden;border-block:1px solid var(--line);padding:22px 0;margin-top:40px;user-select:none}
